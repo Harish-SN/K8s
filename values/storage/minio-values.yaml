@@ -3,14 +3,11 @@ mode: standalone
 replicas: 1
 
 rootUser: admin
-
 rootPassword: ChangeMeStrongPassword123!
 
 persistence:
   enabled: true
-
   storageClass: longhorn
-
   size: 20Gi
 
 resources:
@@ -22,8 +19,8 @@ resources:
     cpu: "1"
     memory: 1Gi
 
-consoleService:
+service:
   type: ClusterIP
 
-service:
+consoleService:
   type: ClusterIP
