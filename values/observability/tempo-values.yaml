@@ -1,0 +1,25 @@
+tempo:
+  retention: 24h
+
+persistence:
+  enabled: true
+  storageClassName: longhorn
+  size: 10Gi
+
+service:
+  type: ClusterIP
+
+resources: {}
+
+traces:
+  otlp:
+    grpc:
+      enabled: true
+    http:
+      enabled: true
+
+metricsGenerator:
+  enabled: false
+
+memcached:
+  enabled: false
