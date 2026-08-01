@@ -1,0 +1,8 @@
+replicaCount: 1
+
+monitoring:
+  podMonitorEnabled: true
+
+config:
+  data:
+    INHERITED_ANNOTATIONS: argocd.argoproj.io/tracking-id
