@@ -1,5 +1,8 @@
 replicaCount: 1
 
+crds:
+  create: false
+
 monitoring:
   podMonitorEnabled: true
 
