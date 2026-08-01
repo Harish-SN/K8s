@@ -9,9 +9,9 @@ spec:
   project: homelab
 
   source:
-    repoURL: https://github.com/cloudnative-pg/cloudnative-pg.git
-    targetRevision: v1.30.0
-    path: releases/cnpg-1.30.0.yaml
+    repoURL: https://github.com/Harish-SN/K8s.git
+    targetRevision: main
+    path: manifests/operators/cloudnative-pg
 
   destination:
     server: https://kubernetes.default.svc
