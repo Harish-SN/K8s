@@ -4,23 +4,14 @@ kind: Application
 metadata:
   name: cloudnative-pg
   namespace: argocd
-  annotations:
-    argocd.argoproj.io/sync-wave: "0"
 
 spec:
   project: homelab
 
-  sources:
-    - repoURL: https://cloudnative-pg.github.io/charts
-      chart: cloudnative-pg
-      targetRevision: 0.28.3
-      helm:
-        valueFiles:
-          - $values/values/databases/cloudnative-pg-values.yaml
-
-    - repoURL: https://github.com/Harish-SN/K8s.git
-      targetRevision: main
-      ref: values
+  source:
+    repoURL: https://github.com/cloudnative-pg/cloudnative-pg.git
+    targetRevision: v1.30.0
+    path: releases/cnpg-1.30.0.yaml
 
   destination:
     server: https://kubernetes.default.svc
@@ -33,3 +24,4 @@ spec:
 
     syncOptions:
       - CreateNamespace=true
+      - ServerSideApply=true
