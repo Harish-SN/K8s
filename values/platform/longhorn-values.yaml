@@ -1,6 +1,0 @@
-defaultSettings:
-  defaultReplicaCount: 1
-
-persistence:
-  defaultClass: true
-  defaultClassReplicaCount: 1
