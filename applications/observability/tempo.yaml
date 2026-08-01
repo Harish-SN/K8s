@@ -11,7 +11,7 @@ spec:
   sources:
     - repoURL: https://grafana.github.io/helm-charts
       chart: tempo
-      targetRevision: 1.23.4
+      targetRevision: 2.2.3
       helm:
         valueFiles:
           - $values/values/observability/tempo-values.yaml
