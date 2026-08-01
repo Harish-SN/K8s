@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+
+metadata:
+  name: prometheus-crds
+  namespace: argocd
+
+spec:
+  project: homelab
+
+  source:
+    repoURL: https://github.com/prometheus-operator/prometheus-operator
+    targetRevision: v0.86.1
+    path: example/prometheus-operator-crd
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: observability
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+
+    syncOptions:
+      - ServerSideApply=true

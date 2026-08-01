@@ -17,3 +17,6 @@ nodeExporter:
 
 prometheusOperator:
   enabled: true
+
+crds:
+  enabled: false
