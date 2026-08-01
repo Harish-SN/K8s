@@ -9,7 +9,7 @@ spec:
   project: homelab
 
   sources:
-    - repoURL: https://grafana.github.io/helm-charts
+    - repoURL: https://grafana-community.github.io/helm-charts
       chart: tempo
       targetRevision: 2.2.3
       helm:
